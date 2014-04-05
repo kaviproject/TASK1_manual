@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+<script >
+//var str="A test JavaScript kabiashkjsdhfidsu Message.";
+//document.write(str);
+//var regex = /(\$\$\d+)/g;
+//var str = "adasda$$1adadad$$23adsads\nadad\nadad$$3";
+
+//document.write(str.split(regex));
+function a()
+{
+
+fh = fopen(getScriptPath("C:\Users\kavi\Desktop\mathwork\M4.txt"), 0); // Open the file for reading 
+if(fh!=-1) // If the file has been successfully opened 
+{ 
+    length = flength(fh);         // Get the length of the file     
+    str = fread(fh, length);     // Read in the entire file 
+    fclose(fh);                    // Close the file 
+     
+// Display the contents of the file     
+    write(str);     
+}
+else
+{
+alert("oh my god");
+}
+}
+</script>
+</head>
+<body>
+<button type="button" onclick="a()">clivk</button>
+</body>
+
+</html>
+
+
+

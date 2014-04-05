@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script>
+
+	
+var i;
+var mycars = new Array();
+mycars[0] = "public class Bicycle {";
+mycars[1] = "public int cadence ;"
+mycars[2] = "public int gear ;"
+mycars[3] = "public int speed ;"
+mycars[4] = "public Bicycle(int startCadence, int startSpeed, int startGear) {";
+mycars[5] = "gear = startGear";
+mycars[6] = "cadence = startCadence ";
+mycars[7] = "speed = startSpeed; ";
+mycars[8] = "} ";
+mycars[9] = "public void setCadence(int newValue) { ";
+mycars[10] = " cadence = newValue; ";
+mycars[11] = " } ";
+mycars[12] = " public void setGear(int newValue) { ";
+mycars[13] = " gear = newValue; ";
+mycars[14] = " }";
+mycars[15] = " public void applyBrake(int decrement) {";
+mycars[16] = " speed -= decrement; ";
+mycars[17] = " } ";
+mycars[18] = " public void speedUp(int increment) { ";
+mycars[19] = " speed += increment; ";
+mycars[20] = " }";
+mycars[21] = " } ";
+mycars[22] = "public class Bicycle {";
+
+for (i=0;i<mycars.length;i++)
+{
+//var comp=new Array();
+//comp[0]="class";
+var k=mycars[i].match("class");
+var l=mycars[i].match(";");
+var m=mycars[i].match("( , , ,) {");
+var s=mycars[i].match("int");
+var v=mycars[i].match("void");
+if(k)
+{
+ //var res=new array();
+ //res[]=k;
+ var r1 =mycars[i];
+document.write(mycars[i]+"<br>" +i+"<br/>");
+//document.write(r1);
+//alert(mycars.length);
+}
+if(s&&l)
+{
+ var r2 =mycars[i];
+document.write(mycars[i] + "<br>" +i+"<br/>");
+//document.write(r2);
+}
+if(v)
+{
+ var r3 =mycars[i];
+document.write(mycars[i] + "<br>" +i + "<br/>");
+
+}
+}
+</script>
+</head>
+<body>
+</body>
+</html>

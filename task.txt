@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p.f").hover(function(){
+		<!--var patt=new RegExp("public int","g");
+		//var res = patt.constructor;
+//        document.getElementById("demo").innerHTML=res;
+//			if(	-->		  
+    $("p.pf").css("background-color","green");
+    },function(){
+    $("p.pf").css("background-color","white");
+});
+  });
+
+$(document).ready(function(){
+  $("p.c").hover(function(){
+						  
+    $("p.pc").css("background-color","green");
+    },function(){
+    $("p.pc").css("background-color","white");
+});
+  });
+$(document).ready(function(){
+  $("p.m").hover(function(){
+						  
+    $("p.pm").css("background-color","green");
+    },function(){
+    $("p.pm").css("background-color","white");
+});
+  });
+$(document).ready(function(){
+  $("p.cl").hover(function(){
+						  
+    $("p.pm").css("background-color","green");
+    },function(){
+    $("deno").css("background-color","white");
+});
+  });
+
+
+</script>
+
+<style>
+table,tr,td
+{
+border:1px solid black;
+width:auto;
+}
+</style>
+
+</head>
+
+<body>
+<br/>
+<br/>
+<br/>
+<H3 align="center">INTERNSHIP TASK </H3>
+<table align="center">
+<tr>
+<td>
+<div style="margin:15px" id="demo">
+<b>1.</b>public class Bicycle {
+                 <br/>
+    <p class="pf">
+   <b>2.</b> public int cadence;<br/>
+   <b> 3.</b>public int gear;<br/>
+   <b>4.</b> public int speed;<br/></p>
+      <p class="pc">
+  <b>5.</b> public Bicycle(int startCadence, int startSpeed, int startGear) {<br/>
+       <b>6.</b> gear = startGear;<br/>
+      <b>7.</b> cadence = startCadence;<br/>
+      <b>8.</b> speed = startSpeed;<br/></p>
+   <b>9. </b>}<br/>
+     // the Bicycle class has<br/>
+    // four methods<br/>
+    <p class="pm">
+   <b>10.</b> public void setCadence(int newValue) {<br/>
+   <b> 11.</b>   cadence = newValue;<br/>
+   <b>12.</b> }<br/>
+        
+   <b> 13.</b>public void setGear(int newValue) {<br/>
+      <b>14.</b>  gear = newValue;<br/>
+   <b>15.</b> }<br/>
+        
+   <b>16.</b>public void applyBrake(int decrement) {<br/>
+    <b>17.</b>  speed -= decrement;<br/>
+    <b>18.</b>}<br/>
+        
+   <b>19.</b> public void speedUp(int increment) {<br/>
+     <b>20.</b>  speed += increment;</p><br/>
+  <b> 21.</b> }<br/>
+        
+<b>22.</b>}<br/>
+</div>
+</td>
+<td border="1px">
+<div style="margin:15px">
+<p><b>UML DIAGRAM</b></p>
+
+<p class="f">CLASS FIELDS</p>
+
+<p class="c">CLASS CONSTRUCTORS</p>
+<p class="m">CLASS METHODS</p>
+
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

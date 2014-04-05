@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script>
+function cls()
+{
+var str=document.getElementById("demo").innerHTML; 
+var n=str.match("public");
+var k=str.match("class");
+var l=str.match("{");
+if(n && k && l)
+{
+	var d=n + k +l;
+	document.getElementById("demo").innerHTML=d;
+    var arr=document.write(d);
+	}
+}
+	
+function prp()
+{
+	var str=document.getElementById("demo").innerHTML; 
+var n=str.match("public");
+//var k=str.match("class");
+var k=str.match("int");
+if(n && k )
+{
+	var d=n + k;
+	document.getElementById("demo").innerHTML=d;
+	
+	alert(d);
+
+}
+	}
+function mtd()
+{
+	//var str=document.getElementById("demo").innerHTML; 
+    // var s=str.match("(");
+   //alert(s);	 
+//alert(document.getElementById("myTable").rows[0].cells.length);
+
+var i;
+var mycars = new Array();
+mycars[0] = "public class Bicycle {";
+mycars[1] = "public int cadence ;"
+mycars[2] = "public int gear ;"
+mycars[3] = "public int speed ;"
+mycars[4] = "public Bicycle(int startCadence, int startSpeed, int startGear) {";
+mycars[5] = "gear = startGear";
+mycars[6] = "cadence = startCadence ";
+mycars[7] = "speed = startSpeed; ";
+mycars[8] = "} ";
+mycars[9] = "public void setCadence(int newValue) { ";
+mycars[10] = " cadence = newValue; ";
+mycars[11] = " } ";
+mycars[12] = " public void setGear(int newValue) { ";
+mycars[13] = " gear = newValue; ";
+mycars[14] = " }";
+mycars[15] = " public void applyBrake(int decrement) {";
+mycars[16] = " speed -= decrement; ";
+mycars[17] = " } ";
+mycars[18] = " public void speedUp(int increment) { ";
+mycars[19] = " speed += increment; ";
+mycars[20] = " }";
+mycars[21] = " } ";
+//mycars[22] = "public class Bicycle {";
+
+
+
+//var re=new RegExp("class","i");
+//var r =mycars[0].match(re);
+//if(r=="class")
+//{
+//alert(mycars[0]);
+//}
+
+//var count=0;
+
+for (i=0;i<mycars.length;i++)
+{
+//var comp=new Array();
+//comp[0]="class";
+var k=mycars[i].match("class");
+var l=mycars[i].match(";");
+var m=mycars[i].match("( , , ,) {");
+var s=mycars[i].match("int");
+var v=mycars[i].match("void");
+if(k)
+{
+ //var res=new array();
+ //res[]=k;
+document.write(mycars[i] + "<br/>"+ i + "<br/>");
+
+//alert(mycars.length);
+}
+if(s&&l)
+{
+document.write(mycars[i] + "<br>" +i+"<br/>");
+}
+if(v)
+{
+document.write(mycars[i] + "<br>" +i + "<br/>");
+
+}
+}
+
+
+
+//var str=document.getElementById("demo").innerHTML; 
+
+
+//if(mycars[i]==str.match(mycars[i]))
+//{
+//count=count+1;
+//
+//}
+//alert(count);
+//var str=document.getElementById("demo").innerHTML; 
+//var n=str.match(mycars[i]);
+//alert(n);
+//}
+	}
+	
+
+</script>
+
+</head>
+
+<body>
+<div id="demo">
+<table id="myTable" >
+<tr>
+<td id="myTd"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26</pre>
+</td><td><div class="highlight"><pre><span class="c">public class Bicycle {</span>
+<span class="c"> public int cadence;</span>
+<span class="c">  public int gear;</span>
+<span class="c"> public int speed;</span>
+
+<span class="c"> public Bicycle(int startCadence, int startSpeed, int startGear) {</span>
+<span class="c">gear = startGear;</span>
+
+<span class="c"> cadence = startCadence;</span>
+
+<span class="c"> speed = startSpeed;</span>
+<span class="c">  }</span>
+<span class="c">  public void setCadence(int newValue) {</span>
+<span class="c">  cadence = newValue;</span>
+<span class="c"> }</span>
+<span class="c"> public void setGear(int newValue) {</span>
+<span class="c"> gear = newValue;</span>
+<span class="c"> }</span>
+<span class="c">  public void applyBrake(int decrement) {
+</span>
+<span class="c"> speed -= decrement;</span>
+<span class="c"> }</span>
+<span class="c">  public void speedUp(int increment) {</span>
+<span class="c">speed += increment;</span>
+<span class="c"> }</span>
+<span class="c"> }</span>
+</pre></div></td>
+</tr>
+</table>
+</div>
+<button onclick="cls()" value="press">class </button>
+<button onclick="prp()" value="press">property </button>
+<button onclick="mtd()" value="press">Method</button>
+
+
+</body>
+</html>

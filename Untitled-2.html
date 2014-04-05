@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p.cls").hover(function(){
+    $("p.class1").css("background-color","yellow");
+    },function(){
+    $("p.class1").css("background-color","white");
+});
+  
+   $("p.obj").hover(function(){
+    $("p1").css("background-color","blue");
+    },function(){
+    $("p1").css("background-color","white");
+});
+   $("p.mth").hover(function(){
+    $("p.mthod").css("background-color","pink");
+    },function(){
+    $("p.mthod").css("background-color","white");
+});
+   
+  });
+</script>
+<style>
+table,tr,td
+{
+border:1px solid black;
+width:auto;
+}
+</style>
+</head>
+<body >
+
+var str="kavitha parupati";
+
+
+<pre>
+
+
+</pre>
+<table align="center" >
+<tr>
+<td >
+<div style="margin:10px">
+<p1>var myHello = new HelloWorld();</p1><br/>
+<!--// call method-->
+myHello.DisplayGreeting();<br/>
+<!--A possible implementation of the HelloWorld class is the following:-->
+<!--// "Hello, World" class-->
+<p class="class1">function  HelloWorld(hour) </p><br/>
+{<br/>
+<!--// class "constructor" initializes this.hour field
+-->
+if (hour)<br/>
+{<br/>
+<!--// if the hour parameter has a value, store it as a class field-->
+this.hour = hour;<br/>
+}<br/>
+else<br/>
+{<br/>
+<!--// if the hour parameter doesn't exist, save the current hour-->
+var date = new Date();<br/>
+this.hour = date.getHours();<br/>
+}<br/>
+<!--// display greeting-->
+<P class="mthod">this.DisplayGreeting = function()</P><br/>
+{<br/>
+if (this.hour >= 22 || this.hour <= 5)<br/>
+document.write("Goodnight, world!");<br/>
+else<br/>
+document.write("Hello, world!");<br/>
+}<br/>
+}<br/>
+</div>
+</td>
+<td>
+<div style="margin:10px">
+<p class="cls">CLASS</p>
+<p class="obj">OBJECTS</p>
+<p class="mth">METHODS</p4>
+</div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

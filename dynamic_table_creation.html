@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function addContact(){
+   var myTable = document.getElementById("myTable");
+   var newTR = document.createElement("tr");
+   var newName = document.createElement("td");
+   newName.innerHTML = document.forms[0].newname.value;
+   var newPhone = document.createElement("td");
+   newPhone.innerHTML = document.forms[0].newphone.value;
+  
+   newTR.appendChild(newName);
+   newTR.appendChild(newPhone);
+   myTable.appendChild(newTR);
+   document.forms[0].reset()
+}
+</script>
+</head>
+<body>
+<form>
+		<table id="myTable">
+   <tr>
+         <th>Name</th>
+          <th colspan="2">Phone</th>
+    </tr>
+    <tr>
+        <td><input type="text" name="newname" /></td>
+        <td><input type="text" name="newphone" /></td>
+        <td><input type="button" onclick="addContact()" value="Add"/></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
